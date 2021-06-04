@@ -1,62 +1,65 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-    x:Class="TouchEffectSample.TouchEffectPage"
-    Title="TOUCH EFFECT">
-    <ScrollView>
-        <StackLayout VerticalOptions="CenterAndExpand"
-                     HorizontalOptions="CenterAndExpand">
+<ContentPage x:Class="TouchEffectSample.TouchEffectPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toucheffectsample="clr-namespace:TouchEffectSample"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Title="TOUCH EFFECT">
+	<ScrollView>
+		<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
 
-            <Label FontSize="Title"
-                   HorizontalOptions="CenterAndExpand"
-                   Text="{Binding Count}"/>
+			<Label FontSize="Title"
+			       HorizontalOptions="CenterAndExpand"
+			       Text="{Binding Count}" />
 
-            <StackLayout BackgroundColor="LightGray"
-                         Margin="30, 20"
-                         xct:TouchEffect.NativeAnimation="True"
-                         xct:TouchEffect.Command="{Binding IncreaseCommand}"
-                         xct:TouchEffect.LongPressCommand="{Binding IncreaseByTenCommand}">
+			<StackLayout Margin="30,20"
+			             xct:TouchEffect.Command="{Binding IncreaseCommand}"
+			             xct:TouchEffect.LongPressCommand="{Binding IncreaseByTenCommand}"
+			             xct:TouchEffect.NativeAnimation="True"
+			             BackgroundColor="LightGray">
 
-                <Label Text="Click" />
-                <BoxView Style="{StaticResource Separator}" />
-                <Label Text="Me" />
-                <BoxView Style="{StaticResource Separator}" />
-                <Label Text="To increase counter" />
-            </StackLayout>
+				<Label Text="Click" />
+				<BoxView Style="{StaticResource Separator}" />
+				<Label Text="Me" />
+				<BoxView Style="{StaticResource Separator}" />
+				<Label Text="To increase counter" />
+			</StackLayout>
 
-            <StackLayout BackgroundColor="LightGray"
-                         Margin="30, 20"
-                         xct:TouchEffect.Command="{Binding IncreaseCommand}"
-                         xct:TouchEffect.PressedScale="1.2"
-                         xct:TouchEffect.PressedRotation="15"
-                         xct:TouchEffect.PressedBackgroundColor="Gold"
-                         xct:TouchEffect.AnimationDuration="500"
-                         xct:TouchEffect.PulseCount="-1">
+			<StackLayout Margin="30,20"
+			             xct:TouchEffect.AnimationDuration="500"
+			             xct:TouchEffect.Command="{Binding IncreaseCommand}"
+			             xct:TouchEffect.PressedBackgroundColor="Gold"
+			             xct:TouchEffect.PressedRotation="15"
+			             xct:TouchEffect.PressedScale="1.2"
+			             xct:TouchEffect.PulseCount="-1"
+			             BackgroundColor="LightGray">
 
-                <Label Text="Click" />
-                <BoxView Style="{StaticResource Separator}" />
-                <Label Text="Me" />
-                <BoxView Style="{StaticResource Separator}" />
-                <Label Text="To increase counter" />
-            </StackLayout>
+				<Label Text="Click" />
+				<BoxView Style="{StaticResource Separator}" />
+				<Label Text="Me" />
+				<BoxView Style="{StaticResource Separator}" />
+				<Label Text="To increase counter" />
+			</StackLayout>
 
-            <StackLayout BackgroundColor="LightGray"
-                         Margin="30, 20"
-                         xct:TouchEffect.NativeAnimation="True">
+			<StackLayout Margin="30,20"
+			             xct:TouchEffect.NativeAnimation="True"
+			             BackgroundColor="LightGray">
 
-                <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding IncreaseCommand}" />
-                </StackLayout.GestureRecognizers>
+				<StackLayout.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding IncreaseCommand}" />
+				</StackLayout.GestureRecognizers>
 
-                <Label Text="Click" />
-                <BoxView Style="{StaticResource Separator}" />
-                <Label Text="Me" />
-                <BoxView Style="{StaticResource Separator}" />
-                <Label Text="To increase counter" />
-            </StackLayout>
+				<Label Text="Click" />
+				<BoxView Style="{StaticResource Separator}" />
+				<Label Text="Me" />
+				<BoxView Style="{StaticResource Separator}" />
+				<Label Text="To increase counter" />
+			</StackLayout>
 
-        </StackLayout>
-    </ScrollView>
+			<toucheffectsample:TouchItemWithContentView HeightRequest="100"
+			                                            HorizontalOptions="Fill"
+			                                            TapCommand="{Binding IncreaseCommand}" />
+
+		</StackLayout>
+	</ScrollView>
 </ContentPage>

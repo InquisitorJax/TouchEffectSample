@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<toucheffectsample:TapCommandView x:Class="TouchEffectSample.TouchItemWithContentView"
+                                  xmlns="http://xamarin.com/schemas/2014/forms"
+                                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                  xmlns:toucheffectsample="clr-namespace:TouchEffectSample"
+                                  xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+                                  x:Name="_view">
+	<ContentView.Content>
+		<!--  xct:TouchEffect.Command="{Binding TapCommand, Source={x:Reference _view}}" NEEDED FOR ANDROID TO WORK :(  -->
+		<Frame Margin="16"
+		       Padding="0"
+		       xct:TouchEffect.NativeAnimation="True"
+		       BackgroundColor="Gray"
+		       CornerRadius="8"
+		       HasShadow="False">
+			<Label Padding="16"
+			       LineBreakMode="WordWrap"
+			       Text="Tap Me! Works on iOS, but not on Android :("
+			       TextColor="White"
+			       VerticalOptions="Center" />
+		</Frame>
+	</ContentView.Content>
+</toucheffectsample:TapCommandView>
