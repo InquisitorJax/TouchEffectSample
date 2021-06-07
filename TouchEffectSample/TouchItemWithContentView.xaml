@@ -13,11 +13,13 @@
 		       BackgroundColor="Gray"
 		       CornerRadius="8"
 		       HasShadow="False">
-			<Label Padding="16"
-			       LineBreakMode="WordWrap"
-			       Text="Tap Me! Works on iOS, but not on Android :("
-			       TextColor="White"
-			       VerticalOptions="Center" />
+			<Grid Padding="16">
+				<Label Padding="16"
+				       LineBreakMode="WordWrap"
+				       Text="Tap Me! Works on iOS, but not on Android :("
+				       TextColor="White"
+				       VerticalOptions="Center" />
+			</Grid>
 		</Frame>
 	</ContentView.Content>
 </toucheffectsample:TapCommandView>

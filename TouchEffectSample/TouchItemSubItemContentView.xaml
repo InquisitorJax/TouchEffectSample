@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<toucheffectsample:TapCommandView x:Class="TouchEffectSample.TouchItemSubItemContentView"
+                                  xmlns="http://xamarin.com/schemas/2014/forms"
+                                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                  xmlns:toucheffectsample="clr-namespace:TouchEffectSample"
+                                  xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+                                  x:Name="_view"
+                                  x:DataType="toucheffectsample:SampleViewModel">
+	<ContentView.Content>
+		<!--  xct:TouchEffect.Command="{Binding TapCommand, Source={x:Reference _view}}" NEEDED FOR ANDROID TO WORK :(  -->
+		<Frame Margin="16"
+		       Padding="0"
+		       xct:TouchEffect.Command="{Binding IncreaseCommand}"
+		       xct:TouchEffect.NativeAnimation="True"
+		       xct:TouchEffect.ShouldMakeChildrenInputTransparent="False"
+		       BackgroundColor="Gray"
+		       CornerRadius="8"
+		       HasShadow="False">
+			<Grid Padding="16">
+				<StackLayout Orientation="Horizontal">
+					<Label LineBreakMode="WordWrap"
+					       Text="Tap Me! Works on Android, but double-fire on iOS :("
+					       TextColor="White"
+					       VerticalOptions="Center" />
+					<Label BackgroundColor="White"
+					       LineBreakMode="WordWrap"
+					       Text="minus - works on android, but not iOS"
+					       TextColor="Black"
+					       VerticalOptions="Center"
+					       WidthRequest="300">
+						<Label.GestureRecognizers>
+							<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+						</Label.GestureRecognizers>
+					</Label>
+				</StackLayout>
+			</Grid>
+		</Frame>
+	</ContentView.Content>
+</toucheffectsample:TapCommandView>

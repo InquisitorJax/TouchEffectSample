@@ -18,7 +18,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="TouchItemWithContentView.xaml">
+    <Compile Update="TouchItemWithContentView.xaml.cs">
+      <DependentUpon>TouchItemWithContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="TouchItemSubItemContentView.xaml.cs">
+      <DependentUpon>TouchItemSubItemContentView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="TouchItemSubItemContentView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

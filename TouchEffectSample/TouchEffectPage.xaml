@@ -12,53 +12,15 @@
 			       HorizontalOptions="CenterAndExpand"
 			       Text="{Binding Count}" />
 
-			<StackLayout Margin="30,20"
-			             xct:TouchEffect.Command="{Binding IncreaseCommand}"
-			             xct:TouchEffect.LongPressCommand="{Binding IncreaseByTenCommand}"
-			             xct:TouchEffect.NativeAnimation="True"
-			             BackgroundColor="LightGray">
 
-				<Label Text="Click" />
-				<BoxView Style="{StaticResource Separator}" />
-				<Label Text="Me" />
-				<BoxView Style="{StaticResource Separator}" />
-				<Label Text="To increase counter" />
-			</StackLayout>
-
-			<StackLayout Margin="30,20"
-			             xct:TouchEffect.AnimationDuration="500"
-			             xct:TouchEffect.Command="{Binding IncreaseCommand}"
-			             xct:TouchEffect.PressedBackgroundColor="Gold"
-			             xct:TouchEffect.PressedRotation="15"
-			             xct:TouchEffect.PressedScale="1.2"
-			             xct:TouchEffect.PulseCount="-1"
-			             BackgroundColor="LightGray">
-
-				<Label Text="Click" />
-				<BoxView Style="{StaticResource Separator}" />
-				<Label Text="Me" />
-				<BoxView Style="{StaticResource Separator}" />
-				<Label Text="To increase counter" />
-			</StackLayout>
-
-			<StackLayout Margin="30,20"
-			             xct:TouchEffect.NativeAnimation="True"
-			             BackgroundColor="LightGray">
-
-				<StackLayout.GestureRecognizers>
-					<TapGestureRecognizer Command="{Binding IncreaseCommand}" />
-				</StackLayout.GestureRecognizers>
-
-				<Label Text="Click" />
-				<BoxView Style="{StaticResource Separator}" />
-				<Label Text="Me" />
-				<BoxView Style="{StaticResource Separator}" />
-				<Label Text="To increase counter" />
-			</StackLayout>
-
-			<toucheffectsample:TouchItemWithContentView HeightRequest="100"
+			<toucheffectsample:TouchItemWithContentView HeightRequest="200"
 			                                            HorizontalOptions="Fill"
 			                                            TapCommand="{Binding IncreaseCommand}" />
+
+			<toucheffectsample:TouchItemSubItemContentView HeightRequest="200"
+			                                               HorizontalOptions="Fill"
+			                                               SubItemTapCommand="{Binding DecreaseCommand}"
+			                                               TapCommand="{Binding IncreaseCommand}" />
 
 		</StackLayout>
 	</ScrollView>
