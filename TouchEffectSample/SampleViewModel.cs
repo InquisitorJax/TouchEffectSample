@@ -19,7 +19,7 @@ namespace TouchEffectSample
 
         public ICommand IncreaseCommand => increaseCommand ??= new Command(() => Count++);
 
-        public ICommand DecreaseCommand => decreaseCommand ??= new Command(() => Count--);
+        public ICommand DecreaseCommand => decreaseCommand ??= new Command(() => Count -= 2);
 
         public ICommand IncreaseByTenCommand => increaseByTenCommand ??= new Command(() => Count += 10);
 

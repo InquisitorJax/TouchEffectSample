@@ -23,7 +23,7 @@
 					       VerticalOptions="Center" />
 					<Label BackgroundColor="White"
 					       LineBreakMode="WordWrap"
-					       Text="minus - works on android, but not iOS"
+					       Text="minus 2 - works on android, but fires both commands on iOS"
 					       TextColor="Black"
 					       VerticalOptions="Center"
 					       WidthRequest="300">
