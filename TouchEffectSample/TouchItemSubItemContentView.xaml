@@ -7,10 +7,9 @@
                                   x:Name="_view"
                                   x:DataType="toucheffectsample:SampleViewModel">
 	<ContentView.Content>
-		<!--  xct:TouchEffect.Command="{Binding TapCommand, Source={x:Reference _view}}" NEEDED FOR ANDROID TO WORK :(  -->
 		<Frame Margin="16"
 		       Padding="0"
-		       xct:TouchEffect.Command="{Binding IncreaseCommand}"
+		       xct:TouchEffect.Command="{Binding TapCommand, Source={x:Reference _view}}"
 		       xct:TouchEffect.NativeAnimation="True"
 		       xct:TouchEffect.ShouldMakeChildrenInputTransparent="False"
 		       BackgroundColor="Gray"
